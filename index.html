@@ -59,81 +59,36 @@
           </form>
   
           <div class="mt-5 col-sm-12 col-md-6 col-xl-3">
-            <h2>Heading</h2>
+            <h2>Heading
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle-fill text-primary" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
+              </svg>
+            </h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolorum, sapiente assumenda hic omnis quaerat molestias, suscipit aliquid perspiciatis voluptatibus repudiandae quia dolore ut voluptates reprehenderit facilis sint itaque quis!</p>
-            <a href="#" class="btn btn-primary">View More</a>
+            <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Click to read more about..." class="btn btn-primary">View More</a>
           </div>
           <div class="mt-5 col-sm-12 col-md-6 col-xl-3">
             <h2>Heading</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis magnam consequuntur aperiam iure quis, assumenda quo fugit et alias magni, id atque quae reiciendis veniam ea in nisi optio autem?</p>
-            <a href="#" class="btn btn-primary">View More</a>
+            <a href="#" data-bs-toggle="popover" data-bs-placement="right" title="Click here to read more" data-bs-content="Learn about all the great documentation available" class="btn btn-primary">View More</a>
           </div>
 
         </div>
       </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-    -->
+    <script>
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+      })
+
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+      })
+    </script>
   </body>
 </html>
